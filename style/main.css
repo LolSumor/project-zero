@@ -1,5 +1,4 @@
-html, body
-{
+html, body {
     width: 100%;
     height: 100%;
 
@@ -11,16 +10,14 @@ html, body
     font-family: Arial;
 }
 
-#wrapper
-{
+#wrapper {
     width: 680px;
     height: 100%;
 
     margin: 0 auto;
 }
 
-#title
-{
+#title {
     width: 680px;
     height: auto;
 
@@ -33,8 +30,7 @@ html, body
     text-align: center;
 }
 
-#game
-{
+#game {
     width: 680px;
     height: 460px;
 

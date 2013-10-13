@@ -19,10 +19,10 @@ class Application
         return self::$rootDatabase;
     }
 
-    // main() returns int, depending on whether starting of depencies
+    // main() returns int (success / error code)
     public static function main()
     {
-        // Create new database connection and assing it to $rootDatabase
+        // Create new database connection and assign it to $rootDatabase
         $rootDatabase = new ApplicationDatabase
         (
             ApplicationConfig::APPLICATION_DATABASE_HOST,

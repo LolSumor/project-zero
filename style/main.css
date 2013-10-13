@@ -31,8 +31,8 @@ html, body {
 }
 
 #game {
-    width: 680px;
-    height: 460px;
+    width: 640px;
+    height: 480px;
 
     background-color: #ffffff;
 }

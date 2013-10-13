@@ -6,6 +6,9 @@ class Entity
     // Collision Radius = 1 Tile
     const COLLISION_RADIUS = 1;
 
+    // Default Speed = 1 Tile
+    const DEFAULT_SPEED = 1;
+
     public $name = null;
 
     public $health = null;
@@ -17,6 +20,13 @@ class Entity
     public $y = 0;
 
     public $skin = 0;
+
+    private $tileMap = null;
+
+    public function getTileMap()
+    {
+        return $this->tileMap;
+    }
 
     public function __construct($name, $health, $mana, $rank, $x, $y, $skin)
     {
@@ -43,5 +53,14 @@ class Entity
         if ($distance > Entity::COLLISION_RADIUS) return false;
 
         return true;
+    }
+
+    public function handleMovement($movingUp, $movingLeft, $movingDown, $movingRight)
+    {
+        // Add speed accordingly to the booleans
+        if ($movingUp) $this->y -= Entity::DEFAULT_SPEED;
+        else if ($movingLeft) $this->x -= Entity::DEFAULT_SPEED;
+        else if ($movingDown) $this->y += Entity::DEFAULT_SPEED;
+        else if ($movingRight) $this->x += Entity::DEFAULT_SPEED;
     }
 }
